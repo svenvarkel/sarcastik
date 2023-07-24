@@ -9,8 +9,22 @@ Main use case for this is expressing sarcasm on social media.
 
 ## Example usage
 
-Works on MacOS
+### In shell
+    
+```bash
+python3 sarcastik/sarcastic.py
+```
+
+### On MacOS
 
 ```bash
-pbpaste | python3 random_case.py | pbcopy
+pbpaste | python3 sarcastik/sarcastik.py | pbcopy
+```
+
+# Helper script
+
+There is helper shell script that can be used to run this script from anywhere.
+
+```bash
+./sarcastik.sh
 ```
