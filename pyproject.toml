@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sarcastik"
+version = "0.1.0"
+description = "Randomises case of input string to express sarcasm"
+authors = ["Sven Varkel <sven.varkel@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "sarcastik"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
