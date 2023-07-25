@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sarcastik"
-version = "0.1.0"
+version = "0.2.0"
 description = "Randomises case of input string to express sarcasm"
 authors = ["Sven Varkel <sven.varkel@gmail.com>"]
 license = "MIT"
