@@ -3,4 +3,4 @@
 # Copyright (c) 2023 Sven Varkel.
 #
 CURDIR=$(dirname "$0")
-pbpaste|python3 random_case/random_case.py|pbcopy
+pbpaste|python3 sarcastik/sarcastik.py|pbcopy

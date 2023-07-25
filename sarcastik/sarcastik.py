@@ -7,18 +7,32 @@
 import re
 import sys
 import random
+import argparse
 
 
 def randomize_case(s):
-    a = re.split(r"(\w)", s.strip())
-    rnd = random.randint(1, 666666)
-    b = map(lambda x: x.upper() if x and (ord(x) + rnd) % 2 == 0 else x.lower(), a)
+    # a = re.split(r"(\w)", s.strip().lower())
+    a = list(s.strip())
+    rnd = random.randint(1, 666)
+    b = map(
+        lambda x: x[1].lower()
+        if x[1] and (ord(x[1]) + rnd + x[0]) % 5 == 0
+        else x[1].upper(),
+        enumerate(a),
+    )
     out = "".join(b)
     return out
 
 
-for line in sys.stdin:
-    s = line.strip()
-    out = randomize_case(s)
+parser = argparse.ArgumentParser(description="Sarcastik")
+parser.add_argument("str", type=str, nargs="?", help="String to be converted")
+args = parser.parse_args()
+if args.str:
+    out = randomize_case(args.str)
     sys.stdout.write(out + "\n")
     sys.exit(0)
+else:
+    for line in sys.stdin:
+        out = randomize_case(line)
+        sys.stdout.write(out + "\n")
+        sys.exit(0)
