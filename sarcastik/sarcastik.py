@@ -27,12 +27,13 @@ def randomize_case(s):
 parser = argparse.ArgumentParser(description="Sarcastik")
 parser.add_argument("str", type=str, nargs="?", help="String to be converted")
 args = parser.parse_args()
+out = None
 if args.str:
     out = randomize_case(args.str)
-    sys.stdout.write(out + "\n")
-    sys.exit(0)
 else:
     for line in sys.stdin:
         out = randomize_case(line)
-        sys.stdout.write(out + "\n")
-        sys.exit(0)
+        break
+
+sys.stdout.write(out + "\n")
+sys.exit(0)
