@@ -4,14 +4,17 @@
 # It can be used with command line tools to paste from clipboard and return converted string to clipboard.
 #
 #
-import re
 import sys
 import random
 import argparse
 
 
 def randomize_case(s):
-    # a = re.split(r"(\w)", s.strip().lower())
+    """
+    Randomizes case of string
+    :param s:
+    :return:
+    """
     a = list(s.strip())
     rnd = random.randint(1, 666)
     b = map(
